@@ -2,7 +2,7 @@
 import { Circle, X } from "phosphor-react"
 import { useState } from "react"
 
-export default function Home() {
+export default function Game() {
 
     const [table, setTable] = useState(["", "", "", "", "", "", "", "", ""])
 
