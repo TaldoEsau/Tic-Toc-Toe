@@ -26,6 +26,31 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+/* table{
+  border-radius: 10px;
+} */
+/* 
+td{
+  width: 100px;
+  height: 100px;
+  font-size: 80px;
+  background-color: #21e221; 
+  margin-top: 100px;
+  transition: 0.4s;
+  align-items: center;
+  color: rgb(0, 0, 0);
+}
+
+td:hover {
+  cursor: pointer;
+  background-color: gray;
+} */
+
+
+/* #ter{
+  background-color: aqua;
+} */
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
