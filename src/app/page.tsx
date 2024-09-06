@@ -1,27 +1,43 @@
+"use client"
 
+import { Input } from "postcss";
+import { FormEvent } from "react";
+import { useState } from "react";
+import Inpute from "./components/input";
+import ButtonOk from "./components/input/Button";
+import { useRef } from "react";
+import Game from "./jogo/page";
 
+function TicTacToe() {
+  return (
+    <div className="">
+      <Game />
+    </div>
+  );
+}
 
 export default function Home() {
 
 
+
+
   return (
-    <div className="w-screen h-screen bg-red-700 flex items-center justify-center" id="container">
-      <div className="bg-blue-700 h-5/6 w-4/5 rounded-xl">
-        <div className="font-mine flex justify-center   items-center m-5 text-center ">
-          <div className=" w-1/3 p-8 bg-black rounded-lg">
-            <h1 className="text-5xl  animate-pulse">TIC TAC TOE</h1>
+    <div className="w-screen h-screen bg-gradient-to-b from-[#242A76] to-[#095F91] flex items-center justify-center p-10" >
+      <div className=" w-full h-full     rounded-xl  flex flex-col relative ">
+        <div className="isolate aspect-video w-full h-full rounded-xl shadow-lg ring-1 ring-black/5 bg-white/10 backdrop-blur-md ">
+
+          <div className="font-mine  flex justify-center m-5 text-center  ">
+            <div className=" w-1/3 p-3  animate-bounce rounded-lg bg-[#011126]">
+              <h1 className="text-4xl animate-pulse">TIC TAC TOE</h1>
+            </div>
           </div>
+          <Game />
         </div>
 
-        <div className="m-3 h-3/4 flex items-center justify-center rounded-xl bg-green-500">
-          <div>
-            <input type="text" className="bg-black" />
-            <button className="bg-amber-700 w-2/3 h-2/3">sds</button>
-          </div>
-        </div>
-
+        {/* {ticTac && <TicTacToe />} */}
       </div>
 
     </div>
+
   );
 }
