@@ -1,10 +1,8 @@
 "use client"
-import { Circle, X } from "phosphor-react"
-import { useState } from "react"
+import { Circle, X } from "phosphor-react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
-import Inpute from "../components/input";
-import ButtonOk from "../components/input/Button";
 import { FormEvent } from "react";
 
 
@@ -22,21 +20,12 @@ export default function Game() {
 
     const [use, setUse] = useState("x")
 
-    const { getValues, formState, register } = useForm<FormData>({
-
-    });
 
 
     const handleSubmit = (event: FormEvent) => {
         event.preventDefault();
     }
-    const [ticTac, setTicTac] = useState(false);
 
-    // const handleClick = () => {
-    //     setTicTac(!ticTac);
-    // }
-
-    console.log(getValues())
 
     function setMarker(i: number) {
         if (table[i]) return
@@ -55,7 +44,6 @@ export default function Game() {
         if (table[0] == table[1] && table[1] == table[2] && table[0] != "") {
             if (use == "x") {
                 setP1(p1 + 1)
-                // alert(name1 + " Win");
                 return
             }
             else { return alert(name2 + " Win"), setP2(p2 + 1) }
@@ -115,9 +103,7 @@ export default function Game() {
     function mountIcon(player: string) {
         return player === 'x' ? <X size={82} color="#161e2f" weight="bold" /> : <Circle size={82} color="#161e2f" weight="bold" />
     }
-    // function mountIcon5(player: string) {
-    //     return player === 'x' ? <X size={82} color="#161e2f" weight="bold" /> : <Circle size={82} color="#161e2f" weight="bold" />
-    // }
+
 
     function mountMarkerClass() {
         if (table[0] === table[1] && table[1] === table[2] && table[0]) {
@@ -155,11 +141,11 @@ export default function Game() {
             <div className="flex justify-center items-center m-5 space-x-2">
                 <form onSubmit={handleSubmit} className="text-black">
                     <div className="space-x-32">
-                        <Inpute className="text-center h-9 rounded-xl" type="text" placeholder="Player 1" onChange={(event) => setName1(event.target.value)} />
-                        <Inpute className="text-center h-9 rounded-xl" type="text" placeholder="Player 2" onChange={(event) => setName2(event.target.value)} />
+                        <input className="text-center h-9 rounded-xl" type="text" placeholder="Player 1" onChange={(event) => setName1(event.target.value)} />
+                        <input className="text-center h-9 rounded-xl" type="text" placeholder="Player 2" onChange={(event) => setName2(event.target.value)} />
                     </div>
                     <div className="justify-center items-center flex text-4xl  ">
-                        <ButtonOk onClick={resetTable} className="m-5 bg-white rounded h-12 w-full">Clear</ButtonOk>
+                        <button onClick={resetTable} className="m-5 bg-white rounded h-12 w-full">Clear</button>
                     </div>
                 </form>
             </div>

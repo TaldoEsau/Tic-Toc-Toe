@@ -3,8 +3,8 @@
 import { Input } from "postcss";
 import { FormEvent } from "react";
 import { useState } from "react";
-import Inpute from "./components/input";
-import ButtonOk from "./components/input/Button";
+import Inpute from "../components/input";
+import ButtonOk from "../components/Button";
 import { useRef } from "react";
 import Game from "./jogo/page";
 
