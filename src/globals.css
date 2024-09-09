@@ -1,3 +1,5 @@
+/* Este arquivo deve ficar na pasta raiz */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -45,7 +47,6 @@ td:hover {
   cursor: pointer;
   background-color: gray;
 } */
-
 
 /* #ter{
   background-color: aqua;
