@@ -1,10 +1,10 @@
 "use client"
-import { Circle, X } from "phosphor-react"
-import { useState } from "react"
+import { Circle, X } from "phosphor-react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
-import Inpute from "../components/input";
-import ButtonOk from "../components/input/Button";
+import Inpute from "../../components/input";
+import ButtonOk from "../../components/input/Button";
 import { FormEvent } from "react";
 
 
@@ -22,6 +22,8 @@ export default function Game() {
 
     const [use, setUse] = useState("x")
 
+
+    // Importação desnecessária, lib não utilizada
     const { getValues, formState, register } = useForm<FormData>({
 
     });
@@ -30,8 +32,12 @@ export default function Game() {
     const handleSubmit = (event: FormEvent) => {
         event.preventDefault();
     }
+
+    // Estado não utilizado
     const [ticTac, setTicTac] = useState(false);
 
+
+    // Deve remover todos os comentários e consoles
     // const handleClick = () => {
     //     setTicTac(!ticTac);
     // }
@@ -49,12 +55,15 @@ export default function Game() {
         setTable(["", "", "", "", "", "", "", "", ""])
     }
 
+
+    //Não está sendo utilizado
     const router = useRouter();
 
     function checkGame() {
         if (table[0] == table[1] && table[1] == table[2] && table[0] != "") {
             if (use == "x") {
                 setP1(p1 + 1)
+                //Remover comentários
                 // alert(name1 + " Win");
                 return
             }
@@ -115,6 +124,7 @@ export default function Game() {
     function mountIcon(player: string) {
         return player === 'x' ? <X size={82} color="#161e2f" weight="bold" /> : <Circle size={82} color="#161e2f" weight="bold" />
     }
+    //Remover comentários
     // function mountIcon5(player: string) {
     //     return player === 'x' ? <X size={82} color="#161e2f" weight="bold" /> : <Circle size={82} color="#161e2f" weight="bold" />
     // }
