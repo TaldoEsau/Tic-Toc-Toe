@@ -51,16 +51,12 @@ export default function Game() {
 
     const router = useRouter();
 
-
-    console.log("p1: ", p1)
-    console.log("p2: ", p2)
-
     function checkGame() {
         if (table[0] == table[1] && table[1] == table[2] && table[0] != "") {
             if (use == "x") {
                 setP1(p1 + 1)
                 // alert(name1 + " Win");
-                 return 
+                return
             }
             else { return alert(name2 + " Win"), setP2(p2 + 1) }
         }
@@ -130,7 +126,7 @@ export default function Game() {
         if (table[3] === table[4] && table[4] === table[5] && table[3]) {
             return "absolute top-[49%]  w-full h-2 bg-[#242A76] rounded-xl opacity-65"
         }
-        
+
         if (table[6] === table[7] && table[7] === table[8] && table[6]) {
             return "absolute top-[82%]  w-full h-2 bg-[#242A76] rounded-xl opacity-65"
         }
@@ -218,7 +214,7 @@ export default function Game() {
                     </div>
 
                     <h1 className="text-6xl font-extrabold">X</h1>
-                    <div>
+                    <div className="">
                         <div className="bg-white w-56 h-16 rounded-xl text-black text-center justify-center items-center text-3xl flex"><h1>{name2}</h1></div>
                         <div className="flex justify-center mt-5 mb-5 text-5xl">
                             {p2}
